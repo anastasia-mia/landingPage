@@ -1,0 +1,174 @@
+.button {
+  height: 60px;
+  background-color: #4F9CF9;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.button > img {
+  height: 10px;
+  width: 10px;
+  transition: transform 0.3s ease;
+}
+.button:hover {
+  background-color: #0767db;
+}
+.button:hover > img {
+  transform: scale(1.5);
+}
+
+.button-yellow {
+  background-color: #FFE492;
+  color: black;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 24px;
+  transition: background 0.3s ease;
+}
+.button-yellow:hover {
+  background-color: #f8bb00;
+}
+
+.header {
+  background: #043873;
+}
+.header__container {
+  display: flex;
+  min-height: 85px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+.header_menu {
+  flex: 1 1 auto;
+}
+.header_buttons {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu_list {
+  display: flex;
+  gap: 32px;
+  padding-right: 55px;
+}
+.menu_item {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu_item > img {
+  transition: transform 0.3s ease;
+}
+.menu_item:hover > img {
+  transform: rotate(180deg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

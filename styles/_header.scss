@@ -1,0 +1,43 @@
+.header {
+  background: $backColor;
+  &__container {
+    display: flex;
+    min-height: 85px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_logo {
+    display: flex;
+    align-items: center;
+  }
+  &_menu {
+    flex: 1 1 auto;
+  }
+  &_buttons {
+    display: flex;
+  }
+}
+.menu {
+  display:flex;
+  justify-content: flex-end;
+  &_list {
+    display: flex;
+    gap: 32px;
+    padding-right: 55px;
+  }
+  &_item {
+    color:white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    >img{
+      transition: transform 0.3s ease;
+    }
+    &:hover{
+      >img{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
