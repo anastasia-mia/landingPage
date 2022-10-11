@@ -3,6 +3,7 @@
   top:0;
   left:0;
   width: 100%;
+
   &:before{
     content:'';
     position: absolute;
@@ -11,81 +12,107 @@
     width: 100%;
     height: 100%;
     background: $backColor;
-    z-index:4;
+    z-index:9;
   }
+
   &__container {
     display: flex;
     min-height: 85px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
   }
+
   &_logo {
     display: flex;
     position: relative;
     align-items: center;
-    z-index: 5;
+    z-index: 10;
     height: 100%;
   }
+
   &_menu {
     flex: 1 1 auto;
   }
+
   &_buttons {
     display: flex;
-    z-index: 5;
+    z-index: 10;
     position:relative;
   }
+
   &_burger{
     display: none;
-    z-index: 5;
+    z-index: 10;
     position: relative;
   }
 }
+
 .menu {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
-  z-index: 5;
+  z-index: 10;
   position: relative;
+
   &_list {
     display: flex;
-    gap: 32px;
-    padding-right: 55px;
+    gap: 71px;
+    padding-right: 95px;
   }
+
   &_item {
-    color:white;
+    color: white;
     display: flex;
     align-items: center;
-    gap: 10px;
-    >img{
-      transition: transform 0.3s ease;
-    }
+    position: relative;
+
     &:hover{
-      >img{
+      .menu_title:after{
         transform: rotate(180deg);
       }
     }
   }
+
+  &_title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 1px;
+
+    &:after {
+      content: '';
+      top: auto;
+      left: auto;
+      width: 10px;
+      height: 5px;
+      background: url("../img/arrowDown.svg");
+      background-size: cover;
+      position: absolute;
+      margin: 6.5px 0 6.5px 20px;
+      transition: transform 0.3s ease;
+    }
+  }
 }
 
-@media (max-width: 1220px){
-  .header_menu{
+@media (max-width: 1220px) {
+  .menu {
     margin: 0 20px;
-  }
-  .menu{
     justify-content: center;
-  }
-  .menu_list{
-    padding-right: 0;
-  }
-  .menu_item{
-    gap: 7px;
+
+    &_list {
+      padding-right: 20px;
+    }
+
+    &_title:after {
+      margin-left: 7px;
+    }
   }
 }
 @media (max-width: 1152px) {
   body.lock{
     overflow: hidden;
   }
+
   .header_burger {
     display: block;
     position: relative;
@@ -93,6 +120,7 @@
     height: 24px;
     margin-left: 20px;
     order: 3;
+
     &:before, &:after {
       content: '';
       background-color: white;
@@ -102,6 +130,7 @@
       left: 0;
       transition: all 0.3s ease;
     }
+
     > span {
       position: absolute;
       background-color: white;
@@ -111,24 +140,30 @@
       top: 11px;
       transition: all 0.3s ease;
     }
+
     &:before {
       top: 0;
     }
+
     &:after {
       bottom: 0;
     }
+
     &.active span {
       transform: scale(0);
     }
+
     &.active:before {
       transform: rotate(45deg);
       top: 11px
     }
+
     &.active:after {
       transform: rotate(-45deg);
       bottom: 11px;
     }
   }
+
   .header_menu {
     position:fixed;
     display:block;
@@ -136,41 +171,64 @@
     left:0;
     width: 100%;
     height: 316px;
-    z-index:3;
+    z-index:6;
     font-size:24px;
     background-color: #4F9CF9;
     justify-content: flex-start;
     margin: 0 0 20px 0;
-    padding: 100px 0 0 15px;
+    padding: 100px 0 0 30px;
     transition: top 0.3s ease;
+
     &.active{
       top:0;
     }
   }
-  .menu_list{
-    flex-direction: column;
+
+  .menu{
+    &_list{
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    &_title{
+      font-size: 20px;
+    }
   }
+
   .header_buttons {
     flex: 1 1 auto;
     justify-content: flex-end;
   }
 }
-@media (max-width: 768px){
-  .header__container{
-    min-height: 65px;
-  }
-  .header_menu{
-    height: 100%;
-  }
-  .header_buttons{
-    display: none;
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      min-height: 65px;
+    }
+
+    &_menu {
+      height: 100%;
+      padding-top: 85px;
+    }
+
+    &_buttons {
+      display: none;
+    }
   }
 }
-@media (max-width: 480px){
-  .header__container{
-    min-height: 50px;
-  }
-  .header_logo img{
-    height: 24px;
+
+@media (max-width: 480px) {
+  .header {
+    &__container {
+      min-height: 50px;
+    }
+
+    &_menu{
+      padding-top: 70px;
+    }
+    &_logo img {
+      height: 24px;
+    }
   }
 }
