@@ -1,0 +1,108 @@
+.whitePace {
+  background-color: $backColor;
+  padding: 252px 0 140px 0;
+
+  &__container {
+    display: flex;
+    gap: 60px;
+    position: relative;
+  }
+
+  &_content {
+    display:block;
+    z-index:3;
+  }
+
+  &_title {
+    padding: 100px 0 24px 0;
+  }
+
+  &_text {
+    padding-bottom: 60px;
+  }
+
+  &_wavyImage{
+    position: absolute;
+    z-index: 2;
+    top: 305px;
+    left: 0;
+    width: 100%;
+  }
+
+  &_forImage {
+    display: flex;
+    flex: 1 1 824px;
+    z-index: 3;
+  }
+
+  &_image{
+    width: 100%;
+    max-height: 549px;
+    background-color: $imageColor;
+  }
+}
+
+
+@media (max-width: 1400px){
+  .whitePace {
+    padding: 190px 0 140px 0;
+
+    &_title {
+      padding: 50px 0 24px 0;
+    }
+
+    &_forImage{
+      height: 456px;
+    }
+  }
+}
+@media (max-width: 1152px){
+  .whitePace {
+    padding: 235px 0 140px 0;
+
+    &_title {
+      padding: 0 0 24px 0;
+    }
+
+    &_forImage{
+      height: 350px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .whitePace {
+    padding: 215px 0 100px 0;
+
+    &__container {
+      display: block;
+    }
+
+    &_content {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &_button{
+      margin-bottom: 100px;
+    }
+
+    &_forImage{
+      max-width: 550px;
+      height: 350px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 468px){
+  .whitePace {
+    padding: 135px 0 80px 0;
+
+    &_forImage{
+      width: 100%;
+      height: 190px;
+    }
+  }
+}

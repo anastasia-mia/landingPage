@@ -2,39 +2,76 @@
   height: 60px;
   background-color: #4F9CF9;
   color: white;
-  padding: 16px 24px;
+  padding: 16px 44px 16px 24px;
   border-radius: 8px;
   font-weight: 500;
+  font-size: 18px;
   line-height: 23px;
-  letter-spacing: 1px;
-  display: flex;
+  letter-spacing: -0.02em;
+  display: inline-block;
   align-items: center;
-  text-align: center;
-  gap: 20px;
   cursor:pointer;
   transition: background 0.3s ease;
   white-space: nowrap;
-  >img{
-    height: 10px;
+  position: relative;
+
+  &:after{
+    content: '';
+    top: auto;
+    left: auto;
     width: 10px;
+    height: 10px;
+    background: url("../img/arrowRight.svg");
+    background-size: cover;
+    position: absolute;
+    margin: 6.5px 20px 6.5px 10px;
     transition: transform 0.3s ease;
   }
+
   &:hover{
     background-color: darken(#4F9CF9, 20%);
-    >img{
-      transform: scale(1.5);
 
+    &:after{
+      transform: scale(1.5);
+    }
+  }
+  &-yellow{
+    background-color: #FFE492;
+    color: black;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 24px;
+    transition: background 0.3s ease;
+
+    &:hover{
+      background-color: darken(#FFE492, 30%);
+    }
+
+    &:after{
+      display:none;
     }
   }
 }
-.button-yellow {
-  background-color: #FFE492;
-  color: black;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-right: 24px;
-  transition: background 0.3s ease;
-  &:hover{
-    background-color: darken(#FFE492, 30%);
+
+.title_white{
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.text_white{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+}
+
+@media (max-width: 478px){
+  .title{
+    font-size: 36px;
+    line-height: 44px;
   }
+
 }

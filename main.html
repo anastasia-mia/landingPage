@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -21,31 +20,38 @@
                     <ul class="menu_list">
                         <li class="menu_item">
                             <a href="#" class="menu_title">Products</a>
-                            <img src="img/arrowDown.png" alt="arrow">
                         </li>
                         <li class="menu_item">
                             <a href="#"  class="menu_title">Solutions</a>
-                            <img src="img/arrowDown.png" alt="arrow">
                         </li>
                         <li class="menu_item">
                             <a href="#"  class="menu_title">Resources</a>
-                            <img src="img/arrowDown.png" alt="arrow"></li>
                         <li class="menu_item">
                             <a href="#"  class="menu_title">Pricing</a>
-                            <img src="img/arrowDown.png" alt="arrow"></li>
                     </ul>
                 </nav>
                 <div class="header_buttons">
-                    <div class="button-yellow button login">Login</div>
-                    <div class="button">
-                        <div>Try Whitepace free</div>
-                        <img src="img/arrowRight.svg" alt="ArrowRight">
-                    </div>
+                    <button class="button-yellow button">Login</button>
+                    <button class="button">Try Whitepace free</button>
                 </div>
             </div>
 
         </header>
-        <main class="page"></main>
+        <main class="page">
+            <section class="whitePace">
+                <img class="whitePace_wavyImage" src="img/wavyElement.png" alt="wavyImage">
+                <div class="whitePace__container">
+                    <div class="whitePace_content">
+                        <p class="whitePace_title title title_white">Get More Done with whitepace</p>
+                        <p class="whitePace_text text_white">Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
+                        <button class="whitePace_button button">Try Whitepace free</button>
+                    </div>
+                    <div class="whitePace_forImage">
+                        <div class="whitePace_image"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer"></footer>
     </div>
     <script src="main.js"></script>
