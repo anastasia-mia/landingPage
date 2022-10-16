@@ -52,26 +52,107 @@
     }
   }
 }
-
-.title_white{
+.title{
+  position: relative;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
-  color: white;
+  z-index: 3;
+  font-size: 72px;
+  line-height: 87px;
   letter-spacing: -0.02em;
+  color: #212529;
+  padding: 68px 0 24px 0;
+
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 67%;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background: url("../img/underline.svg") no-repeat;
+
+  }
 }
 
-.text_white{
+.text{
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: white;
+  letter-spacing: -0.02em;
+  color: #212529;
+  padding-bottom: 60px;
+}
+
+@media(max-width: 1400px){
+  .title:after{
+    top: 58%;
+  }
+}
+
+@media(max-width: 1152px){
+  .title{
+    font-size: 64px;
+    &:after{
+      transform: scaleX(0.5);
+      top: 65%;
+      left: 30%;
+      min-width: 100%;
+      background-size: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .title{
+    font-size: 54px;
+
+    &:after{
+      top: 30%;
+      left: 22%;
+      transform: scaleX(1);
+      background-size: contain;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .title{
+    font-size: 44px;
+    margin: auto;
+
+    &:after{
+      top: 25%;
+      left: 15%;
+      transform: scaleX(0.6);
+    }
+  }
 }
 
 @media (max-width: 478px){
   .title{
     font-size: 36px;
     line-height: 44px;
-  }
 
+    &:after{
+      top: 17%;
+      left: 30%;
+      transform: scaleX(1);
+    }
+  }
+}
+
+@media (max-width: 468px){
+  .title:after{
+    top: 60%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 340px){
+  .title:after{
+    transform: scale(1) scaleX(1);
+    top: 60%;
+    background-size: contain;
+  }
 }
