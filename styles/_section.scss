@@ -15,10 +15,16 @@
 
   &_title {
     padding: 100px 0 24px 0;
+    font-size: 64px;
+    line-height: 77px;
+    color: white;
+    &:after{
+      display: none;
+    }
   }
 
-  &_text {
-    padding-bottom: 60px;
+  &_text{
+    color: white;
   }
 
   &_wavyImage{
@@ -29,19 +35,60 @@
     width: 100%;
   }
 
-  &_forImage {
+  &_image {
     display: flex;
     flex: 1 1 824px;
-    z-index: 3;
+
   }
 
-  &_image{
+  &_forImage{
     width: 100%;
     max-height: 549px;
     background-color: $imageColor;
+    z-index: 3;
   }
 }
 
+.management {
+  padding: 140px 0 50px 0;
+  position: relative;
+
+  &__container {
+    display: flex;
+    gap: 60px;
+  }
+
+  &_content {
+    display:block;
+    z-index:3;
+  }
+
+  &_title {
+    padding-right: 210px;
+  }
+
+  &_image {
+    display: flex;
+    flex: 1 1 748px;
+    z-index: 3;
+  }
+
+  &_forImage {
+    width: 100%;
+    height: 547px;
+    background-color: $imageColor;
+  }
+
+  &__container:before{
+    content:'';
+    background: url("../img/backManagement.svg") no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media (max-width: 1400px){
   .whitePace {
@@ -53,6 +100,21 @@
 
     &_forImage{
       height: 456px;
+    }
+  }
+
+  .management{
+    &__container:before{
+      top:0;
+      left: -10%;
+    }
+
+    &_forImage{
+      height: 448px;
+    }
+
+    &_title {
+      padding: 18px 0 24px 0;
     }
   }
 }
@@ -68,21 +130,32 @@
       height: 350px;
     }
   }
+
+  .management{
+    &__container{
+      gap: 124px;
+    }
+
+    &__container:before{
+      top: -8%;
+      left: -30%;
+      transform: scale(0.5) rotate(10deg);
+    }
+
+    &_title {
+      padding: 0 0 24px 0;
+      width: 400px;
+    }
+
+    &_forImage{
+      height: 328px;
+    }
+  }
 }
 
 @media (max-width: 768px){
   .whitePace {
     padding: 215px 0 100px 0;
-
-    &__container {
-      display: block;
-    }
-
-    &_content {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
 
     &_button{
       margin-bottom: 100px;
@@ -94,6 +167,48 @@
       margin: auto;
     }
   }
+
+  .whitePace__container, .management__container{
+    display: block;
+  }
+
+  .whitePace_content, .management_content{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .management{
+    padding-top: 100px;
+
+    &__container:before{
+      top: -20%;
+      left: -33%;
+      transform: scale(0.5) rotate(10deg);
+    }
+
+    &_content{
+      margin-bottom: 60px;
+    }
+
+    &_forImage{
+      max-width: 560px;
+      height: 350px;
+      margin: auto;
+    }
+
+    &_title{
+      width: 480px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .management_title{
+    line-height: 50px;
+    width: 400px;
+  }
 }
 
 @media (max-width: 468px){
@@ -103,6 +218,26 @@
     &_forImage{
       width: 100%;
       height: 190px;
+    }
+  }
+
+  .management{
+    padding-top: 80px;
+
+    &_forImage{
+      width: 100%;
+      height: 180px;
+    }
+
+    &__container:before{
+      top: -10%;
+      left: -37%;
+      transform: scale(0.5) rotate(0) scaleY(1.2);
+      background-size: contain;
+    }
+
+    &_title{
+      width: 250px;
     }
   }
 }
