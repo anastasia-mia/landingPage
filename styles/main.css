@@ -414,6 +414,40 @@
   height: 100%;
 }
 
+.work {
+  padding: 50px 0 140px 0;
+}
+.work__container {
+  display: flex;
+  gap: 100px;
+}
+.work_circleImage {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+.work_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.work_content {
+  margin: auto;
+}
+.work_title {
+  width: 550px;
+}
+.work_title:after {
+  top: 55%;
+  left: 10%;
+  transform: scaleX(0.6);
+}
+.work_text {
+  padding-right: 10px;
+}
+
 @media (max-width: 1400px) {
   .whitePace {
     padding: 190px 0 140px 0;
@@ -433,6 +467,26 @@
   }
   .management_title {
     padding: 18px 0 24px 0;
+  }
+  .work__container {
+    gap: 160px;
+  }
+  .work_content {
+    margin-right: 10px;
+  }
+  .work_title {
+    padding-top: 0;
+  }
+  .work_text {
+    overflow-wrap: break-word;
+  }
+  .work_title:after {
+    top: 20%;
+  }
+}
+@media (max-width: 1240px) {
+  .work__container {
+    gap: 55px;
   }
 }
 @media (max-width: 1152px) {
@@ -460,6 +514,29 @@
   .management_forImage {
     height: 328px;
   }
+  .work__container {
+    gap: 33px;
+  }
+}
+@media (max-width: 1002px) {
+  .work_content {
+    width: 50%;
+  }
+  .work_title {
+    width: 335px;
+    font-size: 54px;
+  }
+  .work_circleImage {
+    width: 50%;
+  }
+  .work_image {
+    object-fit: contain;
+    object-position: center;
+  }
+  .work_title:after {
+    top: 35%;
+    left: 30%;
+  }
 }
 @media (max-width: 768px) {
   .whitePace {
@@ -473,10 +550,10 @@
     height: 350px;
     margin: auto;
   }
-  .whitePace__container, .management__container {
+  [class*=__container]:not(.header__container, .work__container) {
     display: block;
   }
-  .whitePace_content, .management_content {
+  [class*=_content] {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -499,6 +576,23 @@
   }
   .management_title {
     width: 480px;
+    margin: auto;
+  }
+  .work__container {
+    display: grid;
+    gap: 100px;
+  }
+  .work_title {
+    margin: auto;
+    width: 405px;
+  }
+  .work_content {
+    order: 1;
+    width: 100%;
+  }
+  .work_circleImage {
+    order: 2;
+    width: 75%;
     margin: auto;
   }
 }
@@ -531,6 +625,19 @@
   }
   .management_title {
     width: 250px;
+  }
+  .work_circleImage {
+    width: 100%;
+  }
+  .work__container {
+    gap: 60px;
+  }
+  .work_title {
+    font-size: 36px;
+    width: 288px;
+  }
+  .work_title:after {
+    top: 10%;
   }
 }
 * {
