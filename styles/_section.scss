@@ -131,6 +131,48 @@
   }
 }
 
+.extension {
+  background-color: $backColor;
+  padding: 140px 0;
+
+  &__container {
+    display: flex;
+    gap: 100px;
+  }
+
+  &_content {
+    margin: auto;
+  }
+
+  &_title {
+    color: white;
+    padding-top: 0;
+  }
+
+  &_title:after{
+    width: 80%;
+    transform: scale(0.7);
+    left: 20%;
+    top: 25%;
+  }
+
+  &_text {
+    color: white;
+  }
+
+  &_forImage {
+    display: flex;
+    align-items: center;
+    flex: 1 0 680px;
+  }
+
+  &_image {
+    width: 100%;
+    height: 479px;
+    background-color: $imageColor;
+  }
+}
+
 @media (max-width: 1400px){
   .whitePace {
     padding: 190px 0 140px 0;
@@ -180,12 +222,40 @@
       top: 20%;
     }
   }
+
+  .extension{
+    &__container{
+      gap: 98px;
+    }
+
+    &_title{
+      width: 400px;
+    }
+
+    &_title:after {
+      transform: scale(1) scaleY(1.4);
+      width: 90%;
+      background-size: contain;
+      left: 0;
+      top: 70%;
+    }
+  }
 }
 
 @media (max-width: 1240px) {
   .work {
     &__container {
       gap: 55px;
+    }
+  }
+
+  .extension{
+    &_forImage{
+      flex: 1 0 550px;
+    }
+
+    &_image{
+      height: 400px;
     }
   }
 }
@@ -229,6 +299,35 @@
       gap:33px;
     }
   }
+
+  .extension{
+    &__container{
+      gap: 50px;
+    }
+
+    &_forImage{
+      flex: 1 0 459px;
+    }
+
+    &_content{
+      padding-right: 5px;
+    }
+
+    &_image{
+      height: 320px;
+    }
+
+    &_title{
+      width: 427px;
+      font-size: 60px;
+    }
+
+    &_title:after{
+      transform: scaleY(0.7) scaleX(0.8);
+      top: 28%;
+      left: 32%;
+    }
+  }
 }
 
 @media (max-width: 1002px) {
@@ -254,6 +353,25 @@
     &_title:after{
       top: 35%;
       left: 30%;
+    }
+  }
+
+  .extension{
+    &_forImage{
+      flex: 1 0 350px;
+    }
+
+    &_image{
+      height: 280px;
+    }
+
+    &_title{
+      width: 280px;
+    }
+
+    &_title:after{
+      transform: scale(1);
+      top: 67%;
     }
   }
 }
@@ -330,6 +448,36 @@
       margin: auto;
     }
   }
+
+  .extension{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &_title{
+      width: 400px;
+      font-size: 54px;
+      margin: auto;
+    }
+
+    &_content{
+      margin-bottom: 60px;
+    }
+
+    &_forImage{
+      max-width: 557px;
+      margin: auto;
+    }
+
+    &_image{
+      height: 390px;
+    }
+
+    &_title:after{
+      transform: scaleX(0.5) scale(1.2);
+      top: 32%;
+      left: 42%;
+    }
+  }
 }
 
 @media (max-width: 550px){
@@ -387,6 +535,30 @@
 
     &_title:after{
       top: 10%;
+    }
+  }
+
+  .extension{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &_title{
+      width: 240px;
+      font-size: 36px;
+    }
+
+    &_title:after{
+      transform: scaleY(1.8) scale(1) scaleX(0.6);
+      top: 68%;
+      left: 30%;
+    }
+
+    &_forImage{
+      min-width: 285px;
+    }
+
+    &_image{
+      height: 200px;
     }
   }
 }
