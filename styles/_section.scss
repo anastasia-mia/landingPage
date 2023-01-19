@@ -504,8 +504,10 @@
     }
 
     &_title:after{
-      top: 35%;
-      left: 30%;
+      top: 44%;
+      left: 40%;
+      background-size: contain;
+      transform: scaleX(1) scaleY(2);
     }
   }
 
@@ -618,6 +620,12 @@
     &_title{
       margin: auto;
       width: 405px;
+
+      &:after{
+        transform: scaleX(0.8) scaleY(2);
+        top: 40%;
+        left: 35%;
+      }
     }
 
     &_content{
@@ -759,7 +767,9 @@
     }
 
     &_title:after{
-      top: 10%;
+      top: 8%;
+      left: 29%;
+      transform: scaleX(0.6);
     }
   }
 
