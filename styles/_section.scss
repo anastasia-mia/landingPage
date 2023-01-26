@@ -216,6 +216,170 @@
   }
 }
 
+.plan {
+  padding: 140px 0;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 58%;
+    margin: auto;
+  }
+
+  &_title {
+    width: 530px;
+    text-align: center;
+
+    &:after{
+      transform: scaleX(0.7);
+      left: 30%;
+      top: 50%;
+    }
+  }
+
+  &_text {
+    text-align: center;
+  }
+
+  .subscription{
+    margin-top: 115px;
+
+    &_container{
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    &_name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &_price {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.02em;
+    }
+
+    &_description {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: -0.02em;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+    &_item {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      margin-left: 37px;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -37px;
+        width: 19px;
+        height: 19px;
+        background: url("../img/tick-black.svg");
+        background-size: cover;
+        padding-right: 19px;
+      }
+    }
+
+    &_button {
+      border: 1px solid #FFE492;
+      border-radius: 8px;
+      padding: 16px 40px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.02em;
+      width: 166px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    &_switches{
+      display: none;
+    }
+
+    &_block {
+      display: flex;
+      flex-direction: column;
+      color: #212529;
+      padding: 40px 44px;
+      border: 1px solid #FFE492;
+      border-radius: 10px;
+      gap: 28px;
+      transition: all 0.3s ease;
+
+      &.active{
+        background-color: $backColor;
+        color: white;
+        transform: scale(1.06);
+
+        .subscription{
+          &_price{
+            color: #FFE492;
+          }
+
+          &_item:before{
+            background: url("../img/tick.svg");
+            background-size: contain;
+          }
+
+          &_button {
+            background-color: #4F9CF9;
+            border-color: #4F9CF9;
+          }
+        }
+      }
+      &:hover{
+        background-color: $backColor;
+        color: white;
+        transform: scale(1.06);
+        transition: all 0.3s ease;
+
+        .subscription{
+          &_price{
+            color: #FFE492;
+          }
+
+          &_button{
+            background-color: #4F9CF9;
+            border-color: #4F9CF9;
+
+            &:hover{
+              background-color: darken(#4F9CF9, 20%);
+              border-color: darken(#4F9CF9, 20%);
+              transition: all 0.3s ease;
+            }
+          }
+
+          &_item:before{
+            background: url("../img/tick.svg");
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1400px){
   .whitePace {
     padding: 190px 0 140px 0;
@@ -314,6 +478,12 @@
         top: 55%;
         left: 10%;
       }
+    }
+  }
+
+  .plan{
+    &_content{
+      width: 65%;
     }
   }
 }
@@ -460,6 +630,17 @@
       }
     }
   }
+
+  .plan{
+    &_content{
+      width: 75%;
+    }
+
+    &_title:after{
+      transform: scaleX(0.6);
+      left: 25%;
+    }
+  }
 }
 
 @media (max-width: 1002px) {
@@ -549,6 +730,48 @@
       }
     }
   }
+}
+
+@media (max-width: 905px){
+  .plan{
+    padding-bottom: 890px;
+    overflow: hidden;
+
+    &__container{
+      position: relative;
+    }
+
+    .subscription{
+      padding-left: 17vw;
+      padding-top: 80px;
+      padding-bottom: 20px;
+      position: absolute;
+      z-index: 1;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &_container{
+        gap: 7vw;
+        position: relative;
+        transition: transform 0.8s ease;
+      }
+
+      &_block{
+        width: 60vw;
+        box-sizing: border-box;
+      }
+    }
+
+  }
+  .aaa{
+    background-color: red;
+    height: 700px;
+  }
+
+
 }
 
 @media (max-width: 768px){
@@ -695,6 +918,31 @@
       height: 400px;
     }
   }
+
+  .plan{
+    &_content{
+      width: 100%;
+    }
+
+    &_text{
+      padding-bottom: 20px;
+    }
+
+    &_title{
+      padding-top: 0;
+    }
+
+    &_title:after{
+      transform: scaleX(0.7) scaleY(1.2);
+      top: 52%;
+      left: 31%;
+    }
+
+    .subscription_content{
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
 }
 
 @media (max-width: 550px){
@@ -708,6 +956,12 @@
         top: 65%;
         left: 20%;
       }
+    }
+  }
+
+  .plan{
+    &_title{
+      width: 430px;
     }
   }
 }
@@ -817,6 +1071,54 @@
         transform: scaleX(0.7) scaleY(1.9);
         top: 72%;
         left: 40%;
+      }
+    }
+  }
+
+  .plan{
+    padding-top: 80px;
+
+    &_title{
+      width: 250px;
+
+      &:after{
+        transform: scaleX(0.5) scaleY(2.5);
+        top: 85%;
+        left: 10%;
+      }
+    }
+
+    &_text{
+      padding-bottom: 5px;
+    }
+
+    .subscription{
+      padding-left: 4vw;
+
+      &_switches{
+        display: flex;
+        align-self: flex-start;
+        position: absolute;
+        gap: 15px;
+        left: calc(50vw - 37.5px);
+        top: 100%;
+        padding-top: 30px;
+      }
+
+      &_switch{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #4F9CF9;
+      }
+
+      &_block{
+        width: 85vw;
+        padding: 20px;
+      }
+
+      &_container{
+        gap: 40px;
       }
     }
   }
