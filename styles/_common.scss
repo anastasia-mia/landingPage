@@ -83,6 +83,7 @@
   padding-bottom: 60px;
 }
 
+
 @media(max-width: 1152px){
   .title{
     font-size: 64px;
@@ -102,16 +103,25 @@
   }
 }
 
-@media (max-width: 550px){
-  .title{
-    font-size: 44px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 478px){
+@media (max-width: 468px){
   .title{
     font-size: 36px;
     line-height: 44px;
+  }
+
+  .switches{
+    display: flex;
+    align-self: flex-start;
+    gap: 15px;
+    left: calc(50vw - 37.5px);
+    top: 100%;
+    padding-top: 30px;
+  }
+
+  .switch{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #4F9CF9;
   }
 }

@@ -557,6 +557,84 @@
   }
 }
 
+.clients {
+  padding: 140px 0;
+
+  &_title {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 700px;
+    margin: auto;
+    text-align: center;
+
+    &:after{
+      top: 3%;
+      left: 45%;
+      transform: scaleX(0.4);
+    }
+  }
+
+  .reviews{
+    padding-top: 60px;
+
+    &_container {
+      display: flex;
+      gap: 32px;
+    }
+
+    &_block {
+      padding: 60px 40px;
+      box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: background-color 0.6s ease;
+
+      &:hover{
+        background-color: #4F9CF9;
+
+        .reviews_quotes{
+          content: url("../img/quoteWhite.svg");
+        }
+
+        .reviews_text, .reviews_job{
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+
+    &_text {
+      padding: 32px 0 40px 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      border-bottom: #212529 1px solid;
+    }
+
+    &_description{
+      display: flex;
+      padding-top: 60px;
+      gap: 42px;
+    }
+
+    &_name {
+      padding-bottom: 15px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &_job {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &_switches{
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 1400px){
   .whitePace {
     padding: 190px 0 140px 0;
@@ -684,6 +762,12 @@
 
     &_title{
       width: 550px;
+    }
+  }
+
+  .clients{
+    .reviews_block{
+      padding: 60px 24px;
     }
   }
 }
@@ -912,6 +996,27 @@
       width: 440px;
     }
   }
+
+  .clients{
+    &_title{
+      &:after{
+        left: 25%;
+        top: 7%;
+        transform: scaleX(0.25) scaleY(1.2);
+      }
+    }
+
+    .reviews{
+      &_description{
+        gap: 24px;
+      }
+
+      &_photo{
+        align-self: flex-start;
+        width: 8.2vw;
+      }
+    }
+  }
 }
 
 @media (max-width: 1002px) {
@@ -1078,6 +1183,28 @@
       }
     }
 
+  }
+
+  .clients{
+    .reviews{
+      &_description{
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 15px;
+      }
+
+      &_quotes{
+        width: 9.5vw;
+      }
+
+      &_name{
+        font-size: 18px;
+      }
+
+      &_container{
+        gap: 25px;
+      }
+    }
   }
 }
 
@@ -1349,6 +1476,69 @@
       padding-top: 100px;
     }
   }
+
+  .clients{
+    padding-bottom: 660px;
+
+    &_title{
+      width: 410px;
+      text-align: center;
+
+      &:after{
+        top: 65%;
+        transform: scaleX(0.5) scaleY(1.5);
+        left: 10%;
+      }
+    }
+
+    &__container{
+      position: relative;
+    }
+
+    .reviews{
+      position: absolute;
+      overflow: hidden;
+      padding-left: 13vw;
+
+      &_container{
+        gap: 4vw;
+        position: relative;
+        padding-bottom: 250px;
+        transition: transform 0.8s ease;
+      }
+
+      &_block{
+        width: 70vw;
+        transition: all 0.3s ease;
+
+        &.active{
+          background-color: #4F9CF9;
+
+          .reviews_quotes{
+            content: url("../img/quoteWhite.svg");
+          }
+
+          .reviews_text, .reviews_job{
+            color: white;
+            border-color: white;
+          }
+        }
+      }
+
+      &_name{
+        font-size: 24px;
+      }
+
+      &_description{
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      &_photo{
+        width: 13vw;
+      }
+    }
+  }
 }
 
 @media (max-width: 550px){
@@ -1505,17 +1695,6 @@
         display: flex;
         align-self: flex-start;
         position: absolute;
-        gap: 15px;
-        left: calc(50vw - 37.5px);
-        top: 100%;
-        padding-top: 30px;
-      }
-
-      &_switch{
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #4F9CF9;
       }
 
       &_block{
@@ -1605,6 +1784,61 @@
     &_title{
       width: 100%;
       font-size: 36px;
+    }
+  }
+
+  .clients{
+    padding-top: 80px;
+    position: relative;
+
+    &_title{
+      width: 250px;
+      text-align: center;
+      font-size: 36px;
+
+      &:after{
+        top: 73%;
+        transform: scaleX(0.4) scaleY(1.7);
+        left: 5%;
+      }
+    }
+
+    .reviews{
+      padding-left: 4vw;
+
+      &_container{
+        gap: 40px;
+      }
+
+      &_block{
+        width: 85vw;
+        padding: 20px;
+      }
+
+      &_quotes{
+        width: 56px;
+      }
+
+      &_description{
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &_photo{
+        width: 20vw;
+      }
+
+      &_name{
+        font-size: 18px;
+      }
+
+      &_switches{
+        display: flex;
+        align-self: flex-start;
+        position: absolute;
+        top: 70%;
+      }
+
     }
   }
 }
