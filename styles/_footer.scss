@@ -1,0 +1,151 @@
+.footer {
+  padding-top: 140px;
+  padding-bottom: 67px;
+  background: $backColor;
+
+  &_top {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_whitepace {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 240px;
+  }
+
+  &_text {
+    color: white;
+    padding-bottom: 0;
+    font-size: 16px;
+  }
+
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &_title {
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    padding: 0 0;
+
+
+    &:after{
+      display: none;
+    }
+  }
+
+  &_headTitle{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:hover{
+      color: #FFE492;
+      cursor: pointer;
+    }
+  }
+
+  &_try {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: flex-start;
+    width: 210px;
+  }
+}
+
+.footer_bottom {
+}
+
+@media(max-width: 1152px){
+  .footer{
+    &_top{
+      gap: 15px;
+    }
+    &_whitepace{
+      width: 21vw;
+    }
+
+    &_logo{
+      width: 17vw;
+    }
+
+    &_try{
+      width: 19vw;
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .footer{
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &_top{
+      flex-direction: column;
+      gap: 100px;
+    }
+
+    &_subtitle{
+      font-size: 18px;
+    }
+
+    &_whitepace{
+      width: 380px;
+      gap: 24px;
+    }
+
+    &_logo{
+      width: 300px;
+    }
+
+    &_try{
+      width: 200px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 468px){
+  .footer{
+    padding-top: 140px;
+    padding-bottom: 0;
+
+    &_top{
+      align-items: center;
+      gap: 80px;
+    }
+
+    &_whitepace{
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    &_logo{
+      width: 60vw;
+    }
+
+    &_menu{
+      align-items: center;
+    }
+
+    &_try{
+      width: 63vw;
+    }
+  }
+}
