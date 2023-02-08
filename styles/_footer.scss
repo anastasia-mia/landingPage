@@ -1,12 +1,12 @@
 .footer {
   padding-top: 140px;
-  padding-bottom: 67px;
   background: $backColor;
 
   &_top {
     color: white;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 67px;
   }
 
   &_whitepace {
@@ -51,6 +51,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    color: white;
 
     &:hover{
       color: #FFE492;
@@ -65,15 +66,99 @@
     align-items: flex-start;
     width: 210px;
   }
-}
 
-.footer_bottom {
+  &_bottom {
+    padding: 32px 0;
+    border-top: 1px solid #2E4E73;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_terms{
+    display: flex;
+    gap: 60px;
+  }
+
+  &_select {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 25px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &::before{
+      content: '';
+      top: auto;
+      left: auto;
+      width: 18px;
+      height: 19px;
+      background: url("../img/glob.svg");
+      background-size: contain;
+      position: absolute;
+      margin-left: -24px;
+    }
+
+    &::after{
+      content: '';
+      top: auto;
+      left: auto;
+      width: 10px;
+      height: 5px;
+      background: url("../img/arrowDown.svg");
+      background-size: cover;
+      position: absolute;
+      margin: 6.5px 0 6.5px 6px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &_apps {
+    display: flex;
+    gap: 32px;
+  }
+
+  &_language{
+    position: relative;
+    display: inline-block;
+
+    &:hover ul{
+      top: -400%;
+      opacity: 0.5;
+    }
+  }
+
+  &_options{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    background-color: cornflowerblue;
+    transition: all .3s ease;
+  }
+
+  &_option{
+    display: block;
+    padding: 10px;
+    text-align: end;
+    transition: background-color .3s ease;
+    cursor: pointer;
+
+    &:hover{
+      color: #FFE492;
+    }
+  }
 }
 
 @media(max-width: 1152px){
   .footer{
     &_top{
-      gap: 15px;
+      gap: 10px;
     }
     &_whitepace{
       width: 21vw;
@@ -86,13 +171,26 @@
     &_try{
       width: 19vw;
     }
+
+    &_bottom{
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    &_terms{
+      gap: 4.5vw;
+      justify-content: space-between;
+    }
+
+    &_apps{
+      gap: 3vw;
+    }
   }
 }
 
 @media(max-width: 768px){
   .footer{
     padding-top: 80px;
-    padding-bottom: 100px;
 
     &_top{
       flex-direction: column;
@@ -116,6 +214,24 @@
       width: 200px;
       align-items: center;
       text-align: center;
+    }
+
+    &_bottom{
+      border-top-color: transparent;
+      gap: 20px;
+    }
+
+    &_terms{
+      padding-bottom: 20px;
+      border-bottom: 1px solid #2E4E73;
+      width: 100%;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    &_apps{
+      gap: 32px;
     }
   }
 }
@@ -146,6 +262,26 @@
 
     &_try{
       width: 63vw;
+    }
+
+    &_bottom{
+      flex-direction: column;
+    }
+
+    &_terms{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      border-bottom-color: transparent;
+    }
+
+    &_select{
+      padding-right: 15px;
+    }
+
+    &_apps{
+      align-self: center;
     }
   }
 }
